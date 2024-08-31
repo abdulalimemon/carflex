@@ -10,7 +10,6 @@ import {
   Button,
 } from "@nextui-org/react";
 import { Link } from "react-router-dom";
-import Container from "../Container";
 import { useTheme } from "next-themes";
 import { IoMdSunny } from "react-icons/io";
 import { IoMdMoon } from "react-icons/io";
@@ -57,15 +56,7 @@ export default function NavbarMain() {
         </NavbarContent>
 
         <NavbarContent justify="end">
-          <NavbarItem className="hidden lg:flex">
-            <Link to="#">Login</Link>
-          </NavbarItem>
-          <NavbarItem className="hidden lg:flex">
-            <Button>
-              <Link to="#">Sign Up</Link>
-            </Button>
-          </NavbarItem>
-          <NavbarItem className="lg:hidden flex items-center justify-center mr-3">
+          <NavbarItem className="flex items-center justify-center mr-3">
             <IoMdSunny
               className="absolute  h-[1.25rem] w-[1.25rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 cursor-pointer"
               onClick={() => setTheme("dark")}
@@ -75,6 +66,15 @@ export default function NavbarMain() {
               onClick={() => setTheme("light")}
             />
           </NavbarItem>
+          <NavbarItem className="hidden lg:flex">
+            <Link to="#">Login</Link>
+          </NavbarItem>
+          <NavbarItem className="hidden lg:flex">
+            <Button>
+              <Link to="#">Sign Up</Link>
+            </Button>
+          </NavbarItem>
+
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             className="sm:hidden"

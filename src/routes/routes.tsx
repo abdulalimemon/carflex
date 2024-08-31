@@ -4,6 +4,7 @@ import Home from "../pages/home";
 import AboutUs from "../pages/about-us";
 import PrivacyPolicy from "../pages/privacy-policy";
 import TermsAndConditions from "../pages/terms-and-condition";
+import NotFound from "../pages/404";
 
 const router = createBrowserRouter([
   {
@@ -15,15 +16,15 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: 'about-us',
+        path: "about-us",
         element: <AboutUs />,
       },
       {
-        path: 'privacy-policy',
+        path: "privacy-policy",
         element: <PrivacyPolicy />,
       },
       {
-        path: 'terms-and-conditions',
+        path: "terms-and-conditions",
         element: <TermsAndConditions />,
       },
     ],
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
 
   {
     path: "*",
-    element: <div>hello</div>,
+    element: <NotFound />,
   },
 ]);
 
