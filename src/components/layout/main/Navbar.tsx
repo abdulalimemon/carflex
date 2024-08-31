@@ -40,7 +40,9 @@ export default function NavbarMain() {
       >
         <NavbarContent>
           <NavbarBrand>
-            <p className="font-bold text-inherit">Car Flex</p>
+            <Link to="/" className="font-bold text-inherit">
+              Car Flex
+            </Link>
           </NavbarBrand>
         </NavbarContent>
 
