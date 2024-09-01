@@ -6,8 +6,15 @@
   #navbar-width > header {
     @apply max-w-[1220px];
   }
+  .footerLink {
+    @apply text-blue-200 transition-all duration-200 hover:text-white focus:text-white;
+  }
 }
 
 .privacyAndTermsBg {
-  background-image: radial-gradient( circle farthest-corner at 0.5% 97.2%,  rgba(62,134,211,1) 0%, rgba(147,196,255,1) 100.2% );
+  background-image: radial-gradient(
+    circle farthest-corner at 0.5% 97.2%,
+    rgba(62, 134, 211, 1) 0%,
+    rgba(147, 196, 255, 1) 100.2%
+  );
 }
