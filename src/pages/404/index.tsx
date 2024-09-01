@@ -10,7 +10,7 @@ const NotFound = () => {
   return (
     <>
       <NavbarMain />
-      <section className="my-10 h-[100vh] flex justify-center items-center">
+      <section className="my-10 h-[90vh] flex justify-center items-center">
         <Container>
           <div className="py-10">
             <div className="text-center">

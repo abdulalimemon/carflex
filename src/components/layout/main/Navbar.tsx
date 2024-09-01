@@ -7,12 +7,13 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Button,
 } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 import { useTheme } from "next-themes";
 import { IoMdSunny } from "react-icons/io";
 import { IoMdMoon } from "react-icons/io";
+import Login from "../../../pages/auth/Login";
+import Registration from "../../../pages/auth/Registration";
 
 export default function NavbarMain() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -69,12 +70,10 @@ export default function NavbarMain() {
             />
           </NavbarItem>
           <NavbarItem className="hidden lg:flex">
-            <Link to="#">Login</Link>
+            <Login />
           </NavbarItem>
           <NavbarItem className="hidden lg:flex">
-            <Button>
-              <Link to="#">Sign Up</Link>
-            </Button>
+            <Registration />
           </NavbarItem>
 
           <NavbarMenuToggle
