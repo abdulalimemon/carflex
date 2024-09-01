@@ -1,89 +1,112 @@
-import {
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Button,
-  useDisclosure,
-  Checkbox,
-  Input,
-  Link,
-} from "@nextui-org/react";
+import { Input } from "@nextui-org/react";
+import { useState } from "react";
+import { FaUserAlt } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
-import { FaLock } from "react-icons/fa";
-import React from "react";
+import { MdVisibility, MdVisibilityOff } from "react-icons/md";
+import { Link } from "react-router-dom";
 
-type BackdropType = "opaque" | "blur" | "transparent";
+const Login = () => {
+  const [isVisible, setIsVisible] = useState(false);
 
-export default function Login() {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const [backdrop, setBackdrop] = React.useState<BackdropType>("blur");
-
-  const handleOpen = (backdrop: BackdropType) => {
-    setBackdrop(backdrop);
-    onOpen();
-  };
-
+  const toggleVisibility = () => setIsVisible(!isVisible);
   return (
-    <>
-      <Button color="primary" onPress={() => handleOpen("blur")}>
-        Login
-      </Button>
-      <Modal
-        isOpen={isOpen}
-        onOpenChange={onOpenChange}
-        placement="center"
-        backdrop={backdrop}
-      >
-        <ModalContent>
-          {(onClose) => (
-            <>
-              <ModalHeader className="flex flex-col gap-1">Log in</ModalHeader>
-              <ModalBody>
-                <Input
-                  autoFocus
-                  endContent={
-                    <IoMail className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-                  }
-                  label="Email"
-                  placeholder="Enter your email"
-                  variant="bordered"
-                />
-                <Input
-                  endContent={
-                    <FaLock className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-                  }
-                  label="Password"
-                  placeholder="Enter your password"
-                  type="password"
-                  variant="bordered"
-                />
-                <div className="flex py-2 px-1 justify-between">
-                  <Checkbox
-                    classNames={{
-                      label: "text-small",
-                    }}
+    <section className="relative py-10 bg-gray-900 sm:py-16 lg:py-24">
+      <div className="absolute inset-0">
+        <img
+          className="object-cover w-full h-full"
+          src="https://cdn.rareblocks.xyz/collection/celebration/images/signin/2/man-eating-noodles.jpg"
+          alt=""
+        />
+      </div>
+      <div className="absolute inset-0 bg-gray-900/20"></div>
+
+      <div className="relative max-w-lg px-4 mx-auto sm:px-0">
+        <div className="overflow-hidden bg-white rounded-md shadow-md">
+          <div className="px-4 py-6 sm:px-8 sm:py-7">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900">Welcome back</h2>
+              <p className="mt-2 text-base text-gray-600">
+                Don’t have one?{" "}
+                <a
+                  href="#"
+                  title=""
+                  className="text-blue-600 transition-all duration-200 hover:underline hover:text-blue-700"
+                >
+                  Create a free account
+                </a>
+              </p>
+            </div>
+
+            <form className="mt-8">
+              <Input
+                autoFocus
+                endContent={
+                  <FaUserAlt className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                }
+                label="Name"
+                placeholder="Enter your name"
+                variant="bordered"
+                isInvalid={true}
+                errorMessage="Please enter a valid name."
+              />
+              <Input
+                autoFocus
+                endContent={
+                  <IoMail className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                }
+                label="Email"
+                placeholder="Enter your email"
+                variant="bordered"
+                isInvalid={true}
+                errorMessage="Please enter a valid email address."
+              />
+              <Input
+                label="Password"
+                variant="bordered"
+                placeholder="Enter your password"
+                isInvalid={true}
+                errorMessage="Please enter a valid password."
+                endContent={
+                  <button
+                    className="focus:outline-none"
+                    type="button"
+                    onClick={toggleVisibility}
+                    aria-label="toggle password visibility"
                   >
-                    Remember me
-                  </Checkbox>
-                  <Link color="primary" href="#" size="sm">
-                    Forgot password?
-                  </Link>
-                </div>
-              </ModalBody>
-              <ModalFooter>
-                <Button color="danger" variant="flat" onPress={onClose}>
-                  Close
-                </Button>
-                <Button color="primary" onPress={onClose}>
-                  Sign in
-                </Button>
-              </ModalFooter>
-            </>
-          )}
-        </ModalContent>
-      </Modal>
-    </>
+                    {isVisible ? (
+                      <MdVisibility className="text-2xl text-default-400 pointer-events-none" />
+                    ) : (
+                      <MdVisibilityOff className="text-2xl text-default-400 pointer-events-none" />
+                    )}
+                  </button>
+                }
+                type={isVisible ? "text" : "password"}
+              />
+              <Input
+                autoFocus
+                endContent={
+                  <IoMail className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                }
+                label="Phone Number"
+                placeholder="Enter your phone number"
+                variant="bordered"
+                isInvalid={true}
+                errorMessage="Please enter a valid phone number."
+              />
+              <div className="flex py-2 px-1 justify-between">
+                <p>
+                  Already have an account? <Login />
+                </p>
+                <Link color="primary" to="#" >
+                  Forgot password?
+                </Link>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   );
-}
+};
+
+export default Login;

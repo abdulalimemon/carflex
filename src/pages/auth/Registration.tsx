@@ -6,7 +6,6 @@ import {
   ModalFooter,
   Button,
   useDisclosure,
-  Checkbox,
   Input,
   Link,
 } from "@nextui-org/react";
@@ -15,6 +14,7 @@ import { MdVisibility } from "react-icons/md";
 import { MdVisibilityOff } from "react-icons/md";
 import React from "react";
 import { FaUserAlt } from "react-icons/fa";
+
 
 type BackdropType = "opaque" | "blur" | "transparent";
 
@@ -42,7 +42,7 @@ export default function Registration() {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">Sign up</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1">Sign up to create account</ModalHeader>
               <ModalBody>
                 <Input
                   autoFocus
@@ -50,10 +50,10 @@ export default function Registration() {
                     <FaUserAlt className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
                   }
                   label="Name"
-                  placeholder="Enter your Name"
+                  placeholder="Enter your name"
                   variant="bordered"
                   isInvalid={true}
-                  errorMessage="Please enter a valid Name"
+                  errorMessage="Please enter a valid name."
                 />
                 <Input
                   autoFocus
@@ -64,14 +64,14 @@ export default function Registration() {
                   placeholder="Enter your email"
                   variant="bordered"
                   isInvalid={true}
-                  errorMessage="Please enter a valid Name"
+                  errorMessage="Please enter a valid email address."
                 />
                 <Input
                   label="Password"
                   variant="bordered"
                   placeholder="Enter your password"
                   isInvalid={true}
-                  errorMessage="Please enter a valid Name"
+                  errorMessage="Please enter a valid password."
                   endContent={
                     <button
                       className="focus:outline-none"
@@ -88,21 +88,25 @@ export default function Registration() {
                   }
                   type={isVisible ? "text" : "password"}
                 />
+                <Input
+                  autoFocus
+                  endContent={
+                    <IoMail className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                  }
+                  label="Phone Number"
+                  placeholder="Enter your phone number"
+                  variant="bordered"
+                  isInvalid={true}
+                  errorMessage="Please enter a valid phone number."
+                />
                 <div className="flex py-2 px-1 justify-between">
-                  <Checkbox
-                    classNames={{
-                      label: "text-small",
-                    }}
-                  >
-                    Remember me
-                  </Checkbox>
+                  <p>Already have an account? </p>
                   <Link color="primary" href="#" size="sm">
                     Forgot password?
                   </Link>
                 </div>
               </ModalBody>
               <ModalFooter>
-                
                 <Button className="w-full" onPress={onClose}>
                   Sign up
                 </Button>
