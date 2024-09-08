@@ -13,7 +13,6 @@ import { Link } from "react-router-dom";
 import { useTheme } from "next-themes";
 import { IoMdSunny } from "react-icons/io";
 import { IoMdMoon } from "react-icons/io";
-import Registration from "../../../pages/auth/Registration";
 
 export default function NavbarMain() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -47,7 +46,10 @@ export default function NavbarMain() {
           </NavbarBrand>
         </NavbarContent>
 
-        <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarContent
+          className="hidden sm:flex gap-4 font-semibold"
+          justify="center"
+        >
           <NavbarItem>
             <Link to="/about-us">About Us</Link>
           </NavbarItem>
@@ -70,12 +72,14 @@ export default function NavbarMain() {
             />
           </NavbarItem>
           <NavbarItem className="hidden lg:flex">
-            <Button>
+            <Button className="font-semibold">
               <Link to="/login">Login</Link>
             </Button>
           </NavbarItem>
           <NavbarItem className="hidden lg:flex">
-            <Registration />
+            <Button className="bg-[#593CFB] font-semibold text-white">
+              <Link to="/sign-up">Sign up</Link>
+            </Button>
           </NavbarItem>
 
           <NavbarMenuToggle

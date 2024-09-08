@@ -1,14 +1,14 @@
 import { Input } from "@nextui-org/react";
-import { useState } from "react";
+// import { useState } from "react";
 import { FaUserAlt } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
-import { MdVisibility, MdVisibilityOff } from "react-icons/md";
-import { Link } from "react-router-dom";
+// import { MdVisibility, MdVisibilityOff } from "react-icons/md";
+// import { Link } from "react-router-dom";
 
 const Login = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
 
-  const toggleVisibility = () => setIsVisible(!isVisible);
+  // const toggleVisibility = () => setIsVisible(!isVisible);
   return (
     <section className="relative py-10 bg-gray-900 sm:py-16 lg:py-24">
       <div className="absolute inset-0">
@@ -37,7 +37,7 @@ const Login = () => {
               </p>
             </div>
 
-            <form className="mt-8">
+            <form className="py-5">
               <Input
                 autoFocus
                 endContent={
@@ -60,47 +60,6 @@ const Login = () => {
                 isInvalid={true}
                 errorMessage="Please enter a valid email address."
               />
-              <Input
-                label="Password"
-                variant="bordered"
-                placeholder="Enter your password"
-                isInvalid={true}
-                errorMessage="Please enter a valid password."
-                endContent={
-                  <button
-                    className="focus:outline-none"
-                    type="button"
-                    onClick={toggleVisibility}
-                    aria-label="toggle password visibility"
-                  >
-                    {isVisible ? (
-                      <MdVisibility className="text-2xl text-default-400 pointer-events-none" />
-                    ) : (
-                      <MdVisibilityOff className="text-2xl text-default-400 pointer-events-none" />
-                    )}
-                  </button>
-                }
-                type={isVisible ? "text" : "password"}
-              />
-              <Input
-                autoFocus
-                endContent={
-                  <IoMail className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-                }
-                label="Phone Number"
-                placeholder="Enter your phone number"
-                variant="bordered"
-                isInvalid={true}
-                errorMessage="Please enter a valid phone number."
-              />
-              <div className="flex py-2 px-1 justify-between">
-                <p>
-                  Already have an account? <Login />
-                </p>
-                <Link color="primary" to="#" >
-                  Forgot password?
-                </Link>
-              </div>
             </form>
           </div>
         </div>

@@ -9,12 +9,12 @@ const Footer = () => {
   const year = d.getFullYear();
   return (
     <>
-      <section className="py-10 bg-blue-900 sm:pt-16 lg:pt-24">
+      <section className="py-10 bg-[#F4F4F4 dark:bg-slate-950 sm:pt-16 lg:pt-24">
         <Container>
           <div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-12">
               <div>
-                <h2 className="text-lg font-semibold text-white">Car Flex</h2>
+                <h2 className="text-lg font-semibold dark:text-white">Car Flex</h2>
 
                 <ul className="mt-8 space-y-4">
                   <li>
@@ -44,7 +44,7 @@ const Footer = () => {
               </div>
 
               <div>
-                <p className="text-lg font-semibold text-white">Explore</p>
+                <p className="text-lg font-semibold dark:text-white">Explore</p>
 
                 <ul className="mt-8 space-y-4">
                   <li>
@@ -74,7 +74,7 @@ const Footer = () => {
               </div>
 
               <div>
-                <p className="text-lg font-semibold text-white">Hosting</p>
+                <p className="text-lg font-semibold dark:text-white">Hosting</p>
 
                 <ul className="mt-8 space-y-4">
                   <li>
@@ -104,7 +104,7 @@ const Footer = () => {
               </div>
 
               <div>
-                <p className="text-lg font-semibold text-white">Help</p>
+                <p className="text-lg font-semibold dark:text-white">Help</p>
 
                 <ul className="mt-8 space-y-4">
                   <li>
@@ -142,7 +142,7 @@ const Footer = () => {
                       <a
                         href="#"
                         title=""
-                        className="block text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"
+                        className="block text-slate-700 dark:text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"
                       >
                         <RiTwitterXLine className="size-5" />
                       </a>
@@ -152,7 +152,7 @@ const Footer = () => {
                       <a
                         href="#"
                         title=""
-                        className="block text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"
+                        className="block text-slate-700 dark:text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"
                       >
                         <FaFacebook className="size-5" />
                       </a>
@@ -162,7 +162,7 @@ const Footer = () => {
                       <a
                         href="#"
                         title=""
-                        className="block text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"
+                        className="block text-slate-700 dark:text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"
                       >
                         <BsInstagram className="size-5" />
                       </a>
@@ -198,7 +198,7 @@ const Footer = () => {
                   </ul>
                 </div>
 
-                <p className="mt-6 text-sm text-blue-200 lg:mt-0">
+                <p className="mt-6 text-sm text-slate-700 dark:text-blue-200 lg:mt-0">
                   &copy; Copyright {year}, All Rights Reserved by Car Flex.
                 </p>
               </div>

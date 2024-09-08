@@ -7,7 +7,7 @@
     @apply max-w-[1220px];
   }
   .footerLink {
-    @apply text-blue-200 transition-all duration-200 hover:text-white focus:text-white;
+    @apply text-slate-700 dark:text-blue-200 transition-all duration-200 dark:hover:text-white hover:text-black hover:underline dark:focus:text-white focus:text-black;
   }
 }
 
