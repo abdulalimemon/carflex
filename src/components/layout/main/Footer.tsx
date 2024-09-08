@@ -198,7 +198,7 @@ const Footer = () => {
                   </ul>
                 </div>
 
-                <p className="mt-6 text-sm text-slate-700 dark:text-blue-200 lg:mt-0">
+                <p className="my-6  text-sm text-slate-700 dark:text-blue-200 lg:my-0">
                   &copy; Copyright {year}, All Rights Reserved by Car Flex.
                 </p>
               </div>
