@@ -72,14 +72,16 @@ export default function NavbarMain() {
             />
           </NavbarItem>
           <NavbarItem className="hidden lg:flex">
-            <Button className="font-semibold">
-              <Link to="/login">Login</Link>
-            </Button>
+            <Link to="/login">
+              <Button className="font-semibold">Log in</Button>
+            </Link>
           </NavbarItem>
           <NavbarItem className="hidden lg:flex">
-            <Button className="bg-[#593CFB] font-semibold text-white">
-              <Link to="/sign-up">Sign up</Link>
-            </Button>
+            <Link to="/sign-up">
+              <Button className="bg-[#593CFB] font-semibold text-white">
+                Sign up
+              </Button>
+            </Link>
           </NavbarItem>
 
           <NavbarMenuToggle
