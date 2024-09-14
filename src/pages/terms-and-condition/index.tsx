@@ -39,7 +39,7 @@ const TermsAndConditions = () => {
             <p className="text-sm py-3">
               For the purposes of this Terms and Conditions:
             </p>
-            <ul className="list-disc px-5 md:px-10">
+            <ul className="list-disc text-sm px-5 md:px-10">
               <li>
                 <p className="text-sm py-1">
                   <strong>Account</strong> means a unique account created for
@@ -142,7 +142,7 @@ const TermsAndConditions = () => {
               identify You. Personally identifiable information may include, but
               is not limited to:
             </p>
-            <ul className="list-disc px-5 md:px-10">
+            <ul className="list-disc text-sm px-5 md:px-10">
               <li>
                 <p className="text-sm py-1">Email address</p>
               </li>
@@ -195,7 +195,7 @@ const TermsAndConditions = () => {
               track information and to improve and analyze Our Service. The
               technologies We use may include:
             </p>
-            <ul className="list-disc px-5 md:px-10 space-y-3">
+            <ul className="list-disc text-sm px-5 md:px-10 space-y-3">
               <li>
                 <strong>Cookies or Browser Cookies.</strong> A cookie is a small
                 file placed on Your Device. You can instruct Your browser to
@@ -220,7 +220,7 @@ const TermsAndConditions = () => {
               We use both Session and Persistent Cookies for the purposes set
               out below:
             </p>
-            <ul className="list-disc px-5 md:px-10">
+            <ul className="list-disc text-sm px-5 md:px-10">
               <li>
                 <p className="text-sm py-1">
                   <strong>Necessary / Essential Cookies</strong>
@@ -275,7 +275,7 @@ const TermsAndConditions = () => {
             <p className="text-sm pb-3">
               The Company may use Personal Data for the following purposes:
             </p>
-            <ul className="list-disc px-5 md:px-10">
+            <ul className="list-disc text-sm px-5 md:px-10">
               <li>
                 <p className="text-sm py-1">
                   <strong>To provide and maintain our Service</strong>,
@@ -498,7 +498,7 @@ const TermsAndConditions = () => {
               If you have any questions about this Terms and Conditions, You can
               contact us:
             </p>
-            <ul className="list-disc px-5 md:px-10 space-y-2 pb-20">
+            <ul className="list-disc text-sm px-5 md:px-10 space-y-2 pb-20">
               <li>
                 By visiting this page on our website:{" "}
                 <a
