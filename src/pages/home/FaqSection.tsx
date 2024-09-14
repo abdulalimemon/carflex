@@ -76,7 +76,7 @@ const faqs = [
 
 const FaqSection = () => {
   return (
-    <section className="pb-16 pt-10">
+    <section className="pb-16 pt-1 lg:pt-10">
       <Container>
         <h2 className="font-extrabold text-2xl md:text-4xl my-5 text-center pb-5">
           Frequently asked questions
@@ -126,7 +126,7 @@ const FaqSection = () => {
               key={faq.key}
               aria-label={faq.ariaLabel}
               title={faq.question}
-              className="font-semibold"
+              className="font-semibold dark:bg-gray-900"
             >
               {faq.answer}
             </AccordionItem>

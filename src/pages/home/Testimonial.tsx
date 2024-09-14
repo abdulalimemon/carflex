@@ -87,7 +87,7 @@ const Testimonial = () => {
 
   const { isLast, isFirst } = slideBegOrNot;
   return (
-    <section className="pt-16 pb-10">
+    <section className="pt-16 pb-5 lg:pb-10">
       <Container>
         <div>
           <h2 className="font-extrabold text-2xl md:text-4xl my-5 text-center">Meet the hosts</h2>
