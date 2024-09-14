@@ -3,6 +3,7 @@ import NavbarMain from "./Navbar";
 import Footer from "./Footer";
 import BackToTop from "../BackToTop";
 import ScrollToTop from "../ScrollToTop";
+import { Toaster } from "sonner";
 
 const MainLayout = () => {
   return (
@@ -12,6 +13,7 @@ const MainLayout = () => {
       <Footer />
       <BackToTop />
       <ScrollToTop />
+      <Toaster />
     </>
   );
 };

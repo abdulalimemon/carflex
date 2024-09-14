@@ -9,6 +9,9 @@
   .footerLink {
     @apply text-slate-700 dark:text-blue-200 transition-all duration-200 dark:hover:text-white hover:text-black hover:underline dark:focus:text-white focus:text-black;
   }
+  .AdminNavLink {
+    @apply flex transform items-center rounded-lg px-3 py-2 text-gray-300 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700;
+  }
 }
 
 .privacyAndTermsBg {
