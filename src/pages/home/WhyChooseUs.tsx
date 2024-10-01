@@ -60,7 +60,8 @@ const WhyChooseUs = () => {
         <div className=" py-8">
           <div className="grid grid-cols-1 gap-5 lg:gap-7 sm:grid-cols-2">
             {whyChooseUsInfos.map((item) => (
-              <div className="flex items-start dark:bg-gray-900 shadow rounded-xl p-5 dark:hover:bg-[#593CFB] hover:bg-[#593CFB] dark:hover:text-white hover:text-white py-7 lg:py-10">
+              <div className="flex items-start dark:bg-gray-900 shadow rounded-xl p-5 dark:hover:bg-[#593CFB] hover:bg-[#593CFB] dark:hover:text-white hover:text-white py-7 lg:py-10 transition-all duration-500"
+>
                 <div className="">{item.icon}</div>
                 <div className="ml-5 lg:ml-10">
                   <h3 className="text-lg lg:text-xl font-semibold">

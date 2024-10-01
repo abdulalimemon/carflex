@@ -90,7 +90,9 @@ const Testimonial = () => {
     <section className="pt-16 pb-5 lg:pb-10">
       <Container>
         <div>
-          <h2 className="font-extrabold text-2xl md:text-4xl my-5 text-center">Meet the hosts</h2>
+          <h2 className="font-extrabold text-2xl md:text-4xl my-5 text-center">
+            Meet the hosts
+          </h2>
           <div className="flex justify-between items-center top-0">
             <h2 className="font-extrabold text-xl md:text-2xl my-5">
               Top hosts on Car Flex
@@ -150,7 +152,7 @@ const Testimonial = () => {
           >
             {info.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className="p-6 rounded-2xl shadow-md dark:bg-gray-900 dark:hover:bg-[#593CFB] my-2 hover:bg-[#593CFB] hover:text-white">
+                <div className="p-6 rounded-2xl shadow-md dark:bg-gray-900 dark:hover:bg-[#593CFB] my-2 hover:bg-[#593CFB] hover:text-white transition-all duration-500">
                   <div className="flex items-center mt-4 space-x-4">
                     <img
                       src={item.img}
