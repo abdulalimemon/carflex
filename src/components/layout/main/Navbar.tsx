@@ -9,10 +9,10 @@ import {
   NavbarMenuItem,
   Button,
 } from "@nextui-org/react";
-import { Link } from "react-router-dom";
 import { useTheme } from "next-themes";
 import { IoMdSunny } from "react-icons/io";
 import { IoMdMoon } from "react-icons/io";
+import { NavLink } from "react-router-dom";
 
 export default function NavbarMain() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -40,9 +40,9 @@ export default function NavbarMain() {
       >
         <NavbarContent>
           <NavbarBrand>
-            <Link to="/" className="font-bold text-inherit">
+            <NavLink to="/" className="font-bold text-inherit">
               Car Flex
-            </Link>
+            </NavLink>
           </NavbarBrand>
         </NavbarContent>
 
@@ -51,12 +51,12 @@ export default function NavbarMain() {
           justify="center"
         >
           <NavbarItem>
-            <Link to="/about-us">About Us</Link>
+            <NavLink to="/about-us">About Us</NavLink>
           </NavbarItem>
           <NavbarItem>
-            <Link to="#" aria-current="page">
+            <NavLink to="#" aria-current="page">
               Customers
-            </Link>
+            </NavLink>
           </NavbarItem>
         </NavbarContent>
 
@@ -72,16 +72,16 @@ export default function NavbarMain() {
             />
           </NavbarItem>
           <NavbarItem className="hidden lg:flex">
-            <Link to="/login">
+            <NavLink to="/login">
               <Button className="font-semibold">Log in</Button>
-            </Link>
+            </NavLink>
           </NavbarItem>
           <NavbarItem className="hidden lg:flex">
-            <Link to="/sign-up">
+            <NavLink to="/sign-up">
               <Button className="bg-[#593CFB] font-semibold text-white">
                 Sign up
               </Button>
-            </Link>
+            </NavLink>
           </NavbarItem>
 
           <NavbarMenuToggle
@@ -93,7 +93,7 @@ export default function NavbarMain() {
         <NavbarMenu>
           {menuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
+              <NavLink
                 color={
                   index === 2
                     ? "primary"
@@ -105,7 +105,7 @@ export default function NavbarMain() {
                 to="#"
               >
                 {item}
-              </Link>
+              </NavLink>
             </NavbarMenuItem>
           ))}
         </NavbarMenu>

@@ -64,8 +64,8 @@ const OurTeam = () => {
     <section className="py-20">
       <Container>
         <div className="container flex flex-col items-center text-center">
-          <h2 className="my-6 text-pretty text-2xl font-bold lg:text-4xl">
-            Meet the Team
+          <h2 className="font-extrabold text-2xl md:text-4xl my-5 text-center">
+            Meet the <span className="tracking-tight inline from-[#6FEE8D] to-[#17c964] bg-clip-text text-transparent bg-gradient-to-b">Team</span> 
           </h2>
           <p className="mb-8 max-w-3xl lg:text-lg">
             Meet the dedicated team behind Car Flex, driving innovation and
